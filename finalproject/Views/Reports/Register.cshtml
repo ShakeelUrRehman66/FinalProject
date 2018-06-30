@@ -1,0 +1,44 @@
+﻿@model finalproject.Models.MedicalRecord
+
+@{
+    ViewData["Title"] = "Register";
+}
+<div class="container">
+    <div class="col-md-8">
+        <form class="m-form m-form--fit m-form--label-align-right" asp-controller="Doctor" asp-action="Register" method="post">
+
+            <div class="form-group m-form__group row">
+                <label asp-for="PatientId" class="col-2 col-form-label">
+                </label>
+                <div class="col-10">
+                    <input asp-for="PatientId" class="form-control m-input">
+                </div>
+            </div>
+            <div class="form-group m-form__group row">
+                <label asp-for="ShortDescription" class="col-2 col-form-label">
+                </label>
+                <div class="col-10">
+                    <input asp-for="ShortDescription" class="form-control m-input">
+                </div>
+            </div>
+            <div class="form-group m-form__group row">
+                <label asp-for="image" class="col-2 col-form-label">
+                </label>
+                <div class="col-10">
+                    <input asp-for="image"/>
+                </div>
+            
+                <div class="m-form__actions">
+
+                    <input type="submit" class="btn btn-primary" value="Submit" />
+                    <button type="reset" class="btn btn-secondary">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

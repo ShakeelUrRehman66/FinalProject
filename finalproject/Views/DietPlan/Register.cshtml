@@ -1,0 +1,50 @@
+﻿@model finalproject.Models.DietPlan
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container">
+    <div class="col-md-8">
+        <form class="m-form m-form--fit m-form--label-align-right" asp-controller="DietPlan" asp-action="Register" method="post">
+
+            <div class="form-group m-form__group row">
+                <label asp-for="DietName" class="col-2 col-form-label">
+                </label>
+                <div class="col-10">
+                    <input asp-for="DietName" class="form-control m-input">
+                </div>
+            </div>
+            <div class="form-group m-form__group row">
+                <label asp-for="Description" class="col-2 col-form-label">
+                </label>
+                <div class="col-10">
+                    <input asp-for="Description" class="form-control m-input">
+                </div>
+            </div>
+            <div class="form-group m-form__group row">
+                <label asp-for="DateFrom" class="col-2 col-form-label">
+                </label>
+                <div class="col-10">
+                    <input asp-for="DateFrom" class="form-control m-input">
+                </div>
+            </div>
+            <div class="form-group m-form__group row">
+                <label asp-for="DateTo" class="col-2 col-form-label">
+                </label>
+                <div class="col-10">
+                    <input asp-for="DateTo" class="form-control m-input">
+                </div>
+            </div>
+                <div class="m-form__actions">
+
+                    <input type="submit" class="btn btn-primary" value="Submit" />
+                    <button type="reset" class="btn btn-secondary">
+                        Cancel
+                    </button>
+                </div>
+            
+        </form>
+    </div>
+</div>
+

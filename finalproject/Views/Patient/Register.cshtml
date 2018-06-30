@@ -1,0 +1,62 @@
+﻿@model finalproject.Models.Patient
+<div class="container">
+    <div class="col-md-8">
+        <form class="m-form m-form--fit m-form--label-align-right" asp-controller="Patient" asp-action="Register" method="post">
+            <div class="form-group m-form__group row">
+                <label asp-for="PId" class="col-2 col-form-label">
+                </label>
+                <div class="col-10">
+                    <input asp-for="PId" class="form-control m-input">
+                </div>
+            </div>
+            <div class="form-group m-form__group row">
+                <label asp-for="Name" class="col-2 col-form-label">
+                </label>
+                <div class="col-10">
+                    <input asp-for="Name" class="form-control m-input">
+                </div>
+            </div>
+            <div class="form-group m-form__group row">
+                <label asp-for="CNIC" class="col-2 col-form-label">
+                </label>
+                <div class="col-10">
+                    <input asp-for="CNIC" class="form-control m-input">
+                </div>
+            </div>
+            <div class="form-group m-form__group row">
+                <label asp-for="Email" class="col-2 col-form-label">
+                </label>
+                <div class="col-10">
+                    <input asp-for="Email" class="form-control m-input">
+                </div>
+            </div> <div class="form-group m-form__group row">
+                <label asp-for="Password" class="col-2 col-form-label">
+                </label>
+                <div class="col-10">
+                    <input asp-for="Password" class="form-control m-input">
+                </div>
+            </div> 
+            <div class="form-group m-form__group row">
+                <label asp-for="Disease" class="col-2 col-form-label">
+                </label>
+                <div class="col-10">
+                    <input asp-for="Disease" class="form-control m-input">
+                </div>
+            </div> 
+            <div class="form-group m-form__group row">
+                <label asp-for="Age" class="col-2 col-form-label">
+                </label>
+                <div class="col-10">
+                    <input asp-for="Age" class="form-control m-input">
+                </div>
+                <div class="m-form__actions">
+
+                    <input type="submit" class="btn btn-primary" value="Submit" />
+                    <button type="reset" class="btn btn-secondary">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

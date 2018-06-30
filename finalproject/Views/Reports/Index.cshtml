@@ -1,0 +1,59 @@
+﻿@model IEnumerable<finalproject.Models.MedicalRecord>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+            <div class="m-content">
+
+                <div class="m-portlet m-portlet--mobile">
+                    @Html.Partial("dataheader")
+                    <div class="m-portlet__body">
+                        <!--begin: Search Form -->
+                        @Html.Partial("_searchsort")
+                        <!--end: Search Form -->
+                        <!--begin: Datatable -->
+                        <table class="m-datatable" id="html_table" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PatientId)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.ShortDescription)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.images)
+                                    </th>
+                                 
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PatientId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ShortDescription)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.images)
+                        </td>
+                     
+                        <td>
+                            <div class="btn-group m-btn-group m-btn-group--pill m-btn-group--air">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="m-btn btn btn-brand">Edit</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+}
+                            </tbody>
+                            <!--end: Datatable -->
+                    </div>
+                </div>
+            </div>

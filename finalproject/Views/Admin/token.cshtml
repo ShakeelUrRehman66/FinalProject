@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "ForgotPassword";
+    Layout = "~/Views/Shared/UserLayout/_UserLayout.cshtml";
+}
+
+
+    <div class="m-login__forget-password" style="display:block">
+        <div class="m-login__head">
+            <h3 class="m-login__title">
+                Password Reset Token
+            </h3>
+            <div class="m-login__desc">
+                Enter your ResetToken to reset your password:
+            </div>
+        </div>
+        <form class="m-login__form m-form" asp-action="ResetPassword" asp-controller="Admin">
+            <div class="form-group m-form__group">
+                <input class="form-control m-input" type="text" placeholder="Reset Token" name="resettoken">
+                <input type="hidden" name="email" value="@ViewBag.email" />
+            </div>
+
+            <div class="m-login__form-action">
+                <input type="submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air" value=" Request" />
+                <button id="m_login_forget_password_cancel" class="btn btn-outline-focus m-btn m-btn--pill m-btn--custom">
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </div>
+
+
